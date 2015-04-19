@@ -55,7 +55,9 @@ License: GNU GENERAL PUBLIC LICENSE V2.0
             case 'pinterest':
                 url = 'http://pinterest.com/pin/create/button/?url=' + socialURL + '&media=' + socialImage + '&description=' + socialText ;
                 break;
-
+            case 'tumblr':
+            url = 'http://www.tumblr.com/share/link?url='+ socialURL;
+            break;
         }
    
         /*Finally fire the Pop-up*/    
