@@ -39,7 +39,7 @@ License: GNU GENERAL PUBLIC LICENSE V2.0
             url,
             useCurrentLoc = settings.useCurrentLocation,
             socialURL = (useCurrentLoc) ? window.location : encodeURIComponent(social.url),
-            socialText = social.text,
+            socialText = encodeURIComponent(social.text),
             socialImage = encodeURIComponent(social.image);
         
         switch(social.type){
@@ -55,6 +55,7 @@ License: GNU GENERAL PUBLIC LICENSE V2.0
             case 'pinterest':
                 url = 'http://pinterest.com/pin/create/button/?url=' + socialURL + '&media=' + socialImage + '&description=' + socialText ;
                 break;
+
         }
    
         /*Finally fire the Pop-up*/    
